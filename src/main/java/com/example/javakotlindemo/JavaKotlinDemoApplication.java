@@ -14,7 +14,4 @@ public class JavaKotlinDemoApplication {
         System.out.println(helloService.sayHello());
 
     }
-
-
-
 }
