@@ -1,7 +1,5 @@
 package com.example.javakotlindemo.app
 
-import org.apache.coyote.http11.Constants.a
-
 fun main(vararg args: String) {
     println(sum(1, 2));
 
@@ -15,7 +13,7 @@ fun main(vararg args: String) {
 
     val greet: (String) -> Unit = { a -> println(a) }
     val greet2 = { a: String -> println(a) }
-    val greet3 : () -> Unit = {
+    val greet3: () -> Unit = {
         println("Hello")
     }
 
@@ -24,8 +22,18 @@ fun main(vararg args: String) {
         println("Kotlin")
     }
 
+    variableArgSum(1, 2, 3)
 }
 
 fun sum(a: Int, b: Int): Int {
     return a + b
+}
+
+fun variableArgSum(vararg arg: Int): Int {
+
+    var sum = 0;
+    for (each in arg) {
+        sum += each;
+    }
+    return sum
 }
